@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5220D7F52C77D12F009FA172 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5220D7F42C77D12E009FA172 /* GoogleService-Info.plist */; };
+		5220D7FB2C7BB778009FA172 /* ToDoListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5220D7FA2C7BB778009FA172 /* ToDoListVC.swift */; };
+		52A4772A2C821CBA0092BD43 /* ToDoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A477282C821CBA0092BD43 /* ToDoCell.swift */; };
+		52A4772B2C821CBB0092BD43 /* ToDoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52A477292C821CBA0092BD43 /* ToDoCell.xib */; };
+		52A4772D2C8232260092BD43 /* CustomPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A4772C2C8232260092BD43 /* CustomPopUp.swift */; };
+		52A4772F2C8232740092BD43 /* CustomPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52A4772E2C8232740092BD43 /* CustomPopUp.xib */; };
+		52A477312C8245980092BD43 /* Button+ViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A477302C8245980092BD43 /* Button+ViewStyle.swift */; };
+		52A477352C824B140092BD43 /* PopUpVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A477342C824B140092BD43 /* PopUpVc.swift */; };
 		52E3EDF92C76113F00364897 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E3EDF82C76113F00364897 /* AppDelegate.swift */; };
 		52E3EDFB2C76113F00364897 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E3EDFA2C76113F00364897 /* SceneDelegate.swift */; };
 		52E3EE002C76113F00364897 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E3EDFE2C76113F00364897 /* Main.storyboard */; };
@@ -22,6 +30,14 @@
 /* Begin PBXFileReference section */
 		276800B12FD124B789A6B133 /* Pods_TaskMaster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaskMaster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		28097948EDE4B8619F105356 /* Pods-TaskMaster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaskMaster.release.xcconfig"; path = "Target Support Files/Pods-TaskMaster/Pods-TaskMaster.release.xcconfig"; sourceTree = "<group>"; };
+		5220D7F42C77D12E009FA172 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5220D7FA2C7BB778009FA172 /* ToDoListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListVC.swift; sourceTree = "<group>"; };
+		52A477282C821CBA0092BD43 /* ToDoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoCell.swift; sourceTree = "<group>"; };
+		52A477292C821CBA0092BD43 /* ToDoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToDoCell.xib; sourceTree = "<group>"; };
+		52A4772C2C8232260092BD43 /* CustomPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopUp.swift; sourceTree = "<group>"; };
+		52A4772E2C8232740092BD43 /* CustomPopUp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomPopUp.xib; sourceTree = "<group>"; };
+		52A477302C8245980092BD43 /* Button+ViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+ViewStyle.swift"; sourceTree = "<group>"; };
+		52A477342C824B140092BD43 /* PopUpVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpVc.swift; sourceTree = "<group>"; };
 		52E3EDF52C76113F00364897 /* TaskMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E3EDF82C76113F00364897 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52E3EDFA2C76113F00364897 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,8 +70,95 @@
 				B3188C5130B0D3D6D9DBAA5D /* Pods-TaskMaster.debug.xcconfig */,
 				28097948EDE4B8619F105356 /* Pods-TaskMaster.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		52007B0E2C7D1CF7000AF653 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				52E3EDFA2C76113F00364897 /* SceneDelegate.swift */,
+				52E3EDF82C76113F00364897 /* AppDelegate.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		52007B0F2C7D1D6F000AF653 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		52007B102C7D1DC3000AF653 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				52007B112C7D1DF6000AF653 /* ToDo View */,
+				52E3EE0E2C76134500364897 /* SignUpVC.swift */,
+				52E3EE102C763AEB00364897 /* SignInVC.swift */,
+				52A477342C824B140092BD43 /* PopUpVc.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		52007B112C7D1DF6000AF653 /* ToDo View */ = {
+			isa = PBXGroup;
+			children = (
+				5220D7FA2C7BB778009FA172 /* ToDoListVC.swift */,
+				52007B122C7D1E0C000AF653 /* ToDo Cell */,
+			);
+			path = "ToDo View";
+			sourceTree = "<group>";
+		};
+		52007B122C7D1E0C000AF653 /* ToDo Cell */ = {
+			isa = PBXGroup;
+			children = (
+				52A477282C821CBA0092BD43 /* ToDoCell.swift */,
+				52A477292C821CBA0092BD43 /* ToDoCell.xib */,
+			);
+			path = "ToDo Cell";
+			sourceTree = "<group>";
+		};
+		52007B132C7D1EA3000AF653 /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				52007B142C7D1EB0000AF653 /* Storyboard */,
+				52007B152C7D1EE0000AF653 /* Assets */,
+			);
+			path = Resourses;
+			sourceTree = "<group>";
+		};
+		52007B142C7D1EB0000AF653 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				52E3EDFE2C76113F00364897 /* Main.storyboard */,
+				52E3EE032C76114400364897 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		52007B152C7D1EE0000AF653 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				52E3EE012C76114400364897 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		52007B162C7D1F3B000AF653 /* Masegares */ = {
+			isa = PBXGroup;
+			children = (
+				52E3EE122C766E7C00364897 /* ValidationManager.swift */,
+			);
+			path = Masegares;
+			sourceTree = "<group>";
+		};
+		52007B172C7D1FB4000AF653 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				52E3EE142C76802300364897 /* UiviewController&Showalert.swift */,
+				52A477302C8245980092BD43 /* Button+ViewStyle.swift */,
+			);
+			path = Extentions;
 			sourceTree = "<group>";
 		};
 		52E3EDEC2C76113E00364897 = {
@@ -79,16 +182,16 @@
 		52E3EDF72C76113F00364897 /* TaskMaster */ = {
 			isa = PBXGroup;
 			children = (
-				52E3EDF82C76113F00364897 /* AppDelegate.swift */,
-				52E3EDFA2C76113F00364897 /* SceneDelegate.swift */,
-				52E3EE142C76802300364897 /* UiviewController&Showalert.swift */,
-				52E3EE122C766E7C00364897 /* ValidationManager.swift */,
-				52E3EE0E2C76134500364897 /* SignUpVC.swift */,
-				52E3EE102C763AEB00364897 /* SignInVC.swift */,
-				52E3EDFE2C76113F00364897 /* Main.storyboard */,
-				52E3EE012C76114400364897 /* Assets.xcassets */,
-				52E3EE032C76114400364897 /* LaunchScreen.storyboard */,
+				5220D7F42C77D12E009FA172 /* GoogleService-Info.plist */,
 				52E3EE062C76114400364897 /* Info.plist */,
+				52007B162C7D1F3B000AF653 /* Masegares */,
+				52007B0E2C7D1CF7000AF653 /* Shared */,
+				52007B0F2C7D1D6F000AF653 /* Model */,
+				52007B102C7D1DC3000AF653 /* View Controller */,
+				52007B132C7D1EA3000AF653 /* Resourses */,
+				52007B172C7D1FB4000AF653 /* Extentions */,
+				52A4772C2C8232260092BD43 /* CustomPopUp.swift */,
+				52A4772E2C8232740092BD43 /* CustomPopUp.xib */,
 			);
 			path = TaskMaster;
 			sourceTree = "<group>";
@@ -162,8 +265,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				52E3EE052C76114400364897 /* LaunchScreen.storyboard in Resources */,
+				52A4772B2C821CBB0092BD43 /* ToDoCell.xib in Resources */,
+				5220D7F52C77D12F009FA172 /* GoogleService-Info.plist in Resources */,
 				52E3EE022C76114400364897 /* Assets.xcassets in Resources */,
 				52E3EE002C76113F00364897 /* Main.storyboard in Resources */,
+				52A4772F2C8232740092BD43 /* CustomPopUp.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,10 +324,15 @@
 			files = (
 				52E3EE132C766E7D00364897 /* ValidationManager.swift in Sources */,
 				52E3EDF92C76113F00364897 /* AppDelegate.swift in Sources */,
+				5220D7FB2C7BB778009FA172 /* ToDoListVC.swift in Sources */,
 				52E3EE0F2C76134500364897 /* SignUpVC.swift in Sources */,
 				52E3EE112C763AEB00364897 /* SignInVC.swift in Sources */,
 				52E3EE152C76802300364897 /* UiviewController&Showalert.swift in Sources */,
 				52E3EDFB2C76113F00364897 /* SceneDelegate.swift in Sources */,
+				52A477352C824B140092BD43 /* PopUpVc.swift in Sources */,
+				52A4772D2C8232260092BD43 /* CustomPopUp.swift in Sources */,
+				52A4772A2C821CBA0092BD43 /* ToDoCell.swift in Sources */,
+				52A477312C8245980092BD43 /* Button+ViewStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +489,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -406,6 +518,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
