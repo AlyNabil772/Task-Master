@@ -23,13 +23,13 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jsh-jk-gup">
-                        <rect key="frame" x="102" y="16" width="41.5" height="20.5"/>
+                        <rect key="frame" x="126" y="30" width="41.5" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgb-cU-N5S">
-                        <rect key="frame" x="102" y="60.5" width="41.5" height="20.5"/>
+                        <rect key="frame" x="126" y="60.5" width="41.5" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -44,13 +44,14 @@
                     </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Jsh-jk-gup" firstAttribute="leading" secondItem="ejK-1W-C0c" secondAttribute="trailing" constant="16" id="03u-Cz-snh"/>
+                    <constraint firstItem="Jsh-jk-gup" firstAttribute="leading" secondItem="ejK-1W-C0c" secondAttribute="trailing" constant="40" id="03u-Cz-snh"/>
                     <constraint firstItem="VAs-uk-tgg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="4je-Xd-aVJ"/>
                     <constraint firstItem="sgb-cU-N5S" firstAttribute="trailing" secondItem="Jsh-jk-gup" secondAttribute="trailing" id="9IX-3x-hRD"/>
                     <constraint firstItem="ejK-1W-C0c" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="AUs-Yk-kbJ"/>
                     <constraint firstAttribute="bottom" secondItem="VAs-uk-tgg" secondAttribute="bottom" constant="16" id="D4j-b8-tII"/>
                     <constraint firstAttribute="bottom" secondItem="sgb-cU-N5S" secondAttribute="bottom" constant="16" id="Gyt-bh-AWn"/>
-                    <constraint firstItem="Jsh-jk-gup" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="UWm-LW-L0k"/>
+                    <constraint firstItem="Jsh-jk-gup" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="30" id="UWm-LW-L0k"/>
+                    <constraint firstItem="sgb-cU-N5S" firstAttribute="leading" secondItem="Jsh-jk-gup" secondAttribute="leading" id="acx-TQ-WT4"/>
                     <constraint firstAttribute="trailing" secondItem="VAs-uk-tgg" secondAttribute="trailing" constant="16" id="dN6-21-h7C"/>
                     <constraint firstAttribute="bottom" secondItem="ejK-1W-C0c" secondAttribute="bottom" constant="16" id="euW-v8-0H1"/>
                     <constraint firstItem="ejK-1W-C0c" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="ivX-Q7-wNa"/>
@@ -60,6 +61,7 @@
             <connections>
                 <outlet property="dateAndTimeLabel" destination="Jsh-jk-gup" id="gTh-Vt-Aau"/>
                 <outlet property="toDoNameLabel" destination="sgb-cU-N5S" id="N5I-jy-8a9"/>
+                <outlet property="todoImage" destination="ejK-1W-C0c" id="4mi-8p-9Vt"/>
             </connections>
             <point key="canvasLocation" x="180.43478260869566" y="81.361607142857139"/>
         </tableViewCell>

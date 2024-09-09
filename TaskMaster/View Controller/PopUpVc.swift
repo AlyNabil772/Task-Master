@@ -7,21 +7,27 @@
 
 import UIKit
 
+protocol PopupDelegate: AnyObject {
+    func didAddTodo(contant: String, date: Date)
+}
+
 class PopUpVc: UIViewController {
-    
-    //MARK: - Properties
-    let datePicker = UIDatePicker()
     
     //MARK: - Outlets
     @IBOutlet weak var dateAndTimeTexField: UITextField!
     @IBOutlet weak var toDoTextField: UITextField!
     
+    
+    //MARK: - Properties
+    let datePicker = UIDatePicker()
+    weak var delegate: PopupDelegate?
+    
     //MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
        setDateAndTime()
-
     }
+    
     //MARK: - Private Methods
     private func setDateAndTime() {
         self.datePicker.datePickerMode = .dateAndTime
@@ -42,11 +48,13 @@ class PopUpVc: UIViewController {
 
     //MARK: - Actions
     @IBAction func saveBtnTapped(_ sender: UIButton) {
+        guard let contant = toDoTextField.text, !contant.isEmpty else {return}
+        let date = datePicker.date
+        delegate?.didAddTodo(contant: contant, date: date)
         dismiss(animated: true)
     }
     
     @objc func dateChange(datePicker: UIDatePicker) {
         dateAndTimeTexField.text = formatDate(date: datePicker.date)
     }
-    
 }

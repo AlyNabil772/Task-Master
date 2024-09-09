@@ -15,6 +15,8 @@
 		52A4772F2C8232740092BD43 /* CustomPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52A4772E2C8232740092BD43 /* CustomPopUp.xib */; };
 		52A477312C8245980092BD43 /* Button+ViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A477302C8245980092BD43 /* Button+ViewStyle.swift */; };
 		52A477352C824B140092BD43 /* PopUpVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A477342C824B140092BD43 /* PopUpVc.swift */; };
+		52A477382C836D790092BD43 /* ToDolistModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A477372C836D790092BD43 /* ToDolistModel.swift */; };
+		52A4773B2C850DAF0092BD43 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A4773A2C850DAE0092BD43 /* PostService.swift */; };
 		52E3EDF92C76113F00364897 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E3EDF82C76113F00364897 /* AppDelegate.swift */; };
 		52E3EDFB2C76113F00364897 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E3EDFA2C76113F00364897 /* SceneDelegate.swift */; };
 		52E3EE002C76113F00364897 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E3EDFE2C76113F00364897 /* Main.storyboard */; };
@@ -38,6 +40,8 @@
 		52A4772E2C8232740092BD43 /* CustomPopUp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomPopUp.xib; sourceTree = "<group>"; };
 		52A477302C8245980092BD43 /* Button+ViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+ViewStyle.swift"; sourceTree = "<group>"; };
 		52A477342C824B140092BD43 /* PopUpVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpVc.swift; sourceTree = "<group>"; };
+		52A477372C836D790092BD43 /* ToDolistModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDolistModel.swift; sourceTree = "<group>"; };
+		52A4773A2C850DAE0092BD43 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		52E3EDF52C76113F00364897 /* TaskMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E3EDF82C76113F00364897 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52E3EDFA2C76113F00364897 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +89,7 @@
 		52007B0F2C7D1D6F000AF653 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				52A477372C836D790092BD43 /* ToDolistModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -161,6 +166,14 @@
 			path = Extentions;
 			sourceTree = "<group>";
 		};
+		52A477392C84E5C20092BD43 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				52A4773A2C850DAE0092BD43 /* PostService.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
 		52E3EDEC2C76113E00364897 = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +195,7 @@
 		52E3EDF72C76113F00364897 /* TaskMaster */ = {
 			isa = PBXGroup;
 			children = (
+				52A477392C84E5C20092BD43 /* Api */,
 				5220D7F42C77D12E009FA172 /* GoogleService-Info.plist */,
 				52E3EE062C76114400364897 /* Info.plist */,
 				52007B162C7D1F3B000AF653 /* Masegares */,
@@ -327,10 +341,12 @@
 				5220D7FB2C7BB778009FA172 /* ToDoListVC.swift in Sources */,
 				52E3EE0F2C76134500364897 /* SignUpVC.swift in Sources */,
 				52E3EE112C763AEB00364897 /* SignInVC.swift in Sources */,
+				52A477382C836D790092BD43 /* ToDolistModel.swift in Sources */,
 				52E3EE152C76802300364897 /* UiviewController&Showalert.swift in Sources */,
 				52E3EDFB2C76113F00364897 /* SceneDelegate.swift in Sources */,
 				52A477352C824B140092BD43 /* PopUpVc.swift in Sources */,
 				52A4772D2C8232260092BD43 /* CustomPopUp.swift in Sources */,
+				52A4773B2C850DAF0092BD43 /* PostService.swift in Sources */,
 				52A4772A2C821CBA0092BD43 /* ToDoCell.swift in Sources */,
 				52A477312C8245980092BD43 /* Button+ViewStyle.swift in Sources */,
 			);

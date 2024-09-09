@@ -10,6 +10,7 @@ import FirebaseAuth
 
 class SignInVC: UIViewController {
     
+    
     //MARK: - Outlets
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -17,15 +18,13 @@ class SignInVC: UIViewController {
     //MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-    
     }
     
     //MARK: - Actions
     @IBAction func logInBtnTapped(_ sender: UIButton) {
-//        isUservalid()
-        gotoToDoVc()
+        isUservalid()
+        
     }
-    
     
     @IBAction func goToSignUpBtnTapped(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
@@ -33,7 +32,7 @@ class SignInVC: UIViewController {
 }
 
 
-//MARK: - Private Func
+//MARK: - Private Methods
 extension SignInVC {
     
     private func isUservalid() -> Bool {
@@ -45,27 +44,16 @@ extension SignInVC {
             self.showaAlert(title: "error", massage: "Please Enter a Valid Passord")
             return false
         }
-        isUserExisting(email: email, password: password)
-        return false
-    }
-    
-    func isUserExisting(email: String, password: String) {
-        if emailTextField.text == email && passwordTextField.text == password {
-            FirebaseAuth.Auth.auth().signIn(withEmail: email, password: password, completion: {[weak self] result, error in
-                guard let strongSelf = self else {
-                 
-                    return
-                }
-                guard error == nil else {
-                    print("wrong data")
-                    self?.showaAlert(title: "error", massage: "User Not Existing")
-                    return
-                }
-
-                print("you have signed in")
-            })
-        }
         
+        Auth.auth().signIn(withEmail: email, password: password) { result, error in
+            if let error = error {
+                print("there is error: \(error)")
+                self.showaAlert(title: "error", massage: "User Not Existing")
+            } else {
+                self.gotoToDoVc()
+            }
+        }
+        return false
     }
     
     private func gotoToDoVc() {

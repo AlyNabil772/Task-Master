@@ -6,9 +6,11 @@
 //
 
 import UIKit
-import FirebaseAuth
+
+
 
 class SignUpVC: UIViewController {
+    
     
     //MARK: - Outlets
     @IBOutlet weak var userNameTextField: UITextField!
@@ -23,20 +25,20 @@ class SignUpVC: UIViewController {
     //MARK: - Actions
     @IBAction func signUpBtnTapped(_ sender: UIButton) {
         if isUserDataValid() {
-            self.showaAlert(title: "Created succeeded", massage: "Please Go To Sign In")
+            goToTodoList()
         }
     }
     
     @IBAction func goToSignInBtnTapped(_ sender: UIButton) {
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController: UIViewController = storyboard.instantiateViewController(withIdentifier: "SignInVC")
+        let viewController: SignInVC = storyboard.instantiateViewController(withIdentifier: "SignInVC") as! SignInVC
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
 
-//MARK: - Private Func
+//MARK: - Private Methods
 extension SignUpVC {
-
+    
     private func isUserDataValid() -> Bool {
         guard let name = userNameTextField.text, !name.isEmpty, name.count >= 3 else {
             self.showaAlert(title: "error", massage: "Please Enter a Valid Name")
@@ -58,23 +60,16 @@ extension SignUpVC {
             self.showaAlert(title: "Error", massage: "Pleae enter your password. Example: Abc@1234")
             return false
         }
-        saveUserDataToDatabase(email: email, password: password)
+        
+        UserDataFromFirebase.shared.saveUserDataToDatabase(email: email, password: password)
         
         return true
     }
-
-    func saveUserDataToDatabase(email: String, password: String) {
-        FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password, completion: {[weak self] result, error in
-            guard let strongSelf = self else {
-
-                return
-            }
-            guard error == nil else {
-
-                return
-            }
-            print("you have signed in")
-        })
+    
+    private func goToTodoList() {
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "ToDoListVC")
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }
 
